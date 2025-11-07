@@ -1,0 +1,33 @@
+# Python
+venv/
+env/
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+.Python
+
+# Node
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

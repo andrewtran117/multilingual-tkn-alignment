@@ -6,17 +6,17 @@ import { TokenDisplay } from './TokenDisplay';
 import { MetricsPanel } from './MetricsPanel';
 
 export function AnalysisWorkspace() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisData, setAnalysisData] = useState<any>(null);
 
   return (
     <div className="space-y-6">
-      <InputPanel onAnalyze={() => setIsAnalyzing(true)} />
+      <InputPanel onAnalyze={(data) => setAnalysisData(data)} />
 
-      {isAnalyzing && (
+      {analysisData && (
         <>
           <div className="border border-gray-300 p-4">
             <h3 className="text-lg font-semibold mb-4">Tokens</h3>
-            <TokenDisplay />
+            <TokenDisplay data={analysisData} />
           </div>
 
           <div className="border border-gray-300 p-4">
